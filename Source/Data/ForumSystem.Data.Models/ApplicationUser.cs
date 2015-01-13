@@ -8,6 +8,10 @@ namespace ForumSystem.Data.Models
 {
     public class ApplicationUser : IdentityUser, IAuditInfo, IDeletableEntity
     {
+        public ApplicationUser()
+        {
+            this.CreatedOn = DateTime.Now;
+        }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
