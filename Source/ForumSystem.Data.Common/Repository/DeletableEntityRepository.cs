@@ -1,13 +1,15 @@
 ﻿namespace BlogSystem.Data.Repositories.Base
 {
+    using System.Data.Entity;
     using System.Linq;
-
-    using BlogSystem.Data.Contracts;
+    using ForumSystem.Data.Common;
+    using ForumSystem.Data.Common.Models;
+    using ForumSystem.Data.Common.Repository;
 
     public class DeletableEntityRepository<T> : GenericRepository<T>, IDeletableEntityRepository<T>
         where T : class, IDeletableEntity
     {
-        public DeletableEntityRepository(IApplicationDbContext context)
+        public DeletableEntityRepository(DbContext context)
             : base(context)
         {
         }

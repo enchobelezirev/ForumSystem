@@ -6,11 +6,12 @@
     using System.Data.Entity.Infrastructure;
     using System.Linq;
 
-    using BlogSystem.Data.Contracts;
+
+    using ForumSystem.Data.Common.Repository;
 
     public class GenericRepository<T> : IRepository<T> where T : class
     {
-        public GenericRepository(IApplicationDbContext context)
+        public GenericRepository(DbContext context)
         {
             if (context == null)
             {
@@ -23,7 +24,7 @@
 
         protected IDbSet<T> DbSet { get; set; }
 
-        protected IApplicationDbContext Context { get; set; }
+        protected DbContext Context { get; set; }
 
         public virtual IQueryable<T> All()
         {
