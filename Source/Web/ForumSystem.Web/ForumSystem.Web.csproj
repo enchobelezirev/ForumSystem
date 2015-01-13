@@ -255,6 +255,10 @@
       <Project>{3ea70593-2c05-4870-b538-733d49940e6a}</Project>
       <Name>ForumSystem.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\ForumSystem.Data.Common\ForumSystem.Data.Common.csproj">
+      <Project>{e1359a6b-1ec2-40c0-8650-0d08bb5afed8}</Project>
+      <Name>ForumSystem.Data.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
